@@ -227,18 +227,56 @@
 		\begin{itemize}
 			\item One-to-one? Both $x=1$ and $x=4$ yields $f(x)=2$, so this is not one-to-one.
 			\item Onto? The range of this function is the union of $E$ and $O$, where $E$ is the set of images where the preimage is even, and $O$ is that where the preimage is odd.
+			$E=\mathbb{N}$, so the range and codomain are equal.
+			The following is the proof.
 			
-			For all $x\in\mathbb{N}$ that is also even, $x/2$ will be either even or odd.
-			$E$ will contain $0$ and $1$.
-
-			For all $x\in\mathbb{N}$ that is also odd, $x+1$ will be even and greater than 1.
-			$O$ will contain all integers greater than 1.
-
-			So, $E\cup O$, which is the range, is exactly the same as the codomain, $\mathbb{N}$.
+			\begin{itemize}
+				\item
+				$E$ is defined as follows: $\{n/2 \mid n, n/2 \in \mathbb{N}\}$.
+			
+				\item
+				It has been provided that every $n$ in $E$ is also in $\mathbb{N}$.
+				So, $E\subseteq\mathbb{N}$.
+	
+				\item
+				Now, let's prove that $\mathbb{N}\subseteq E$.
+				This means that for all $x\in\mathbb{N}$, $x\in E$.
+				If $x\in\mathbb{N}$, then $2x\in\mathbb{N}$ and is an even number.
+				Since $x=(2x)/2$, $x$ is in $E$.
+				Every element of $\mathbb{N}$ is in $E$, so $\mathbb{N}\subseteq E$.
+	
+				\item
+				In conclusion, $E = \mathbb{N}$.
+	
+				\item
+				So, $E\cup O$, which is the range, is exactly the same as the codomain, $\mathbb{N}$.
+			\end{itemize}
+			
+			\item Bijective? Since $f$ is not one-to-one, it is not bijective.
+			
 		\end{itemize}
 		
-		\item 
-		
+		\item
+		\begin{itemize}
+			\item One-to-one? Yes. Proof that $f(s_1) = f(s_2)$ implies that $s_1 = s_2$: (Assume that $n=f(s_1)=f(s_2)$)
+			\begin{itemize}
+				\item Case 1: $n$ is odd. Solving $n = s_1 - 1$ for $s_1$, we get $s_1 = n + 1$. Similarly, $s_2 = n + 1$. Therefore, $s_1 = s_2$.
+				\item Case 2: $n$ is even. Solving $n = s_1 + 1$ for $s_1$, we get $s_1 = n - 1$. Similarly, $s_2 = n - 1$. Therefore, $s_1 = s_2$.
+				\item $n$ is either odd or even since $n\in\mathbb{N}$.
+				\item It is therefore proven that $f(s_1) = f(s_2)$ implies that $s_1 = s_2$.
+			\end{itemize}
+			\item Onto? Yes. Proof that the codomain ($\mathbb{N}$) is a subset of the range ($C$):
+			\begin{itemize}
+				\item Let $n\in\mathbb{N}$. $n$ is even, or $n$ is odd.
+				\begin{itemize}
+					\item If $n$ is even, then $n+1$ is odd and is in $\mathbb{N}$. $f(n+1) = n$, so $n$ is an image of $f$.
+					\item If $n$ is odd, then $n-1$ is even. Since $n>0$, $n-1\ge0$, and thus $n-1\in\mathbb{N}$. $f(n-1) = n$, so $n$ is an image of $f$.
+				\end{itemize}
+				\item $n$ is an image of $f$, so if $n\in\mathbb{N}$ then $n\in C$.
+				\item This is to say that $\mathbb{N}\subseteq C$.
+			\end{itemize}
+			\item Bijective? Since $f$ is both one-to-one and onto, it is bijective.
+		\end{itemize}
 	\end{enumerate}
 		
 	\end{enumerate}
